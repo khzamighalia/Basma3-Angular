@@ -1,0 +1,31 @@
+ <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Login <span> in </span>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container ">
+            <form [formGroup]="LoginForm" (ngSubmit)="login()">
+              <div>
+                <input formControlName="email" type="text" placeholder="Your Name" />
+
+                <input formControlName="password"  type="password" placeholder="Your Password" >
+              </div>
+
+              {{ LoginForm.value | json}}
+             
+              <div class="btn_box">
+                <button>
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
